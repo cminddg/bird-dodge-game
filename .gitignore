@@ -1,0 +1,45 @@
+# Unity generated folders
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+
+# Unity generated files
+*.csproj
+*.sln
+*.user
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+sysinfo.txt
+
+# Unity crash and memory captures
+*.stackdump
+*.dmp
+*.dump
+
+# IDE/editor
+.vscode/
+.idea/
+*.tmp
+*.log
+
+# Local shortcuts and packaged builds
+*.lnk
+*.zip
+*.7z
+*.rar
+
+# Large source art that is not used directly by Unity
+*.psd
+
+# OS files
+.DS_Store
+Thumbs.db
