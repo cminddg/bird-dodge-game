@@ -1,0 +1,174 @@
+@font-face {
+  font-family: "PoppinsLocal";
+  src: url("./assets/fonts/poppins-regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --ink: #3b271b;
+  --paper: #fff8df;
+  --sun: #ffd85c;
+  --sky: #82c7e9;
+  --leaf-dark: #176a3f;
+  --shadow: rgba(59, 39, 27, 0.18);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  background: var(--sky);
+  color: var(--ink);
+  font-family: "PoppinsLocal", "Microsoft JhengHei", sans-serif;
+}
+
+button {
+  font: inherit;
+}
+
+.game-shell {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(#82c7e9 0%, #a4dcf4 64%, #71b665 64%, #347b38 100%);
+}
+
+#gameCanvas {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.hud {
+  position: absolute;
+  top: clamp(14px, 2.6vw, 32px);
+  z-index: 2;
+  min-width: 132px;
+  padding: 12px 16px;
+  border: 3px solid rgba(59, 39, 27, 0.22);
+  border-radius: 18px;
+  background: rgba(255, 248, 223, 0.86);
+  box-shadow: 0 10px 24px var(--shadow);
+  backdrop-filter: blur(6px);
+}
+
+.hud-left {
+  left: clamp(12px, 2.4vw, 32px);
+}
+
+.hud-right {
+  right: clamp(12px, 2.4vw, 32px);
+  text-align: right;
+}
+
+.hud-label {
+  font-size: clamp(12px, 1.3vw, 15px);
+  letter-spacing: 0.08em;
+  color: rgba(59, 39, 27, 0.68);
+}
+
+.hud-value {
+  margin-top: 2px;
+  font-size: clamp(26px, 4vw, 44px);
+  line-height: 1;
+  font-weight: 700;
+}
+
+.hud-best {
+  margin-top: 4px;
+  font-size: clamp(14px, 1.7vw, 20px);
+  color: rgba(59, 39, 27, 0.72);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.25), rgba(130, 199, 233, 0.12) 45%, rgba(25, 73, 54, 0.18));
+}
+
+.overlay.is-hidden {
+  display: none;
+}
+
+.panel {
+  width: min(520px, calc(100vw - 32px));
+  padding: clamp(24px, 5vw, 42px);
+  border: 4px solid rgba(59, 39, 27, 0.25);
+  border-radius: 30px;
+  background: rgba(255, 248, 223, 0.94);
+  box-shadow: 0 22px 48px rgba(59, 39, 27, 0.22);
+  text-align: center;
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  color: var(--leaf-dark);
+  font-size: 14px;
+  letter-spacing: 0.16em;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(34px, 7vw, 64px);
+  line-height: 1.02;
+}
+
+#overlayCopy {
+  margin: 16px auto 24px;
+  max-width: 34em;
+  color: rgba(59, 39, 27, 0.78);
+  font-size: clamp(15px, 2.2vw, 18px);
+  line-height: 1.65;
+}
+
+.primary-button {
+  min-width: 184px;
+  padding: 15px 30px;
+  border: 0;
+  border-radius: 999px;
+  background: linear-gradient(180deg, var(--sun), #f0a92d);
+  color: var(--ink);
+  box-shadow: 0 8px 0 #b86d25, 0 18px 26px rgba(59, 39, 27, 0.2);
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.primary-button:active {
+  transform: translateY(5px);
+  box-shadow: 0 3px 0 #b86d25, 0 12px 18px rgba(59, 39, 27, 0.18);
+}
+
+.hint {
+  margin: 22px 0 0;
+  color: rgba(59, 39, 27, 0.58);
+  font-size: 14px;
+}
+
+@media (max-width: 620px) {
+  .hud {
+    min-width: 106px;
+    padding: 10px 12px;
+    border-radius: 14px;
+  }
+
+  .hint {
+    font-size: 12px;
+  }
+}

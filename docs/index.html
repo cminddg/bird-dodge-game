@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>抓小鳥 Bird Dodge</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="game-shell" aria-label="抓小鳥網頁遊戲">
+      <canvas id="gameCanvas" aria-label="遊戲畫面"></canvas>
+
+      <section class="hud hud-left" aria-label="生命數">
+        <div class="hud-label">BIRDS</div>
+        <div id="livesText" class="hud-value">3/3</div>
+      </section>
+
+      <section class="hud hud-right" aria-label="分數">
+        <div class="hud-label">SCORE</div>
+        <div id="scoreText" class="hud-value">0</div>
+        <div id="bestText" class="hud-best">BEST 0</div>
+      </section>
+
+      <section id="overlay" class="overlay" aria-live="polite">
+        <div class="panel">
+          <p id="overlayEyebrow" class="eyebrow">BIRD DODGE</p>
+          <h1 id="overlayTitle">準備起飛</h1>
+          <p id="overlayCopy">
+            按 Start 開始。空白鍵或滑鼠點擊會讓小鳥上升，並切換目前這隻鳥的造型。
+          </p>
+          <button id="primaryButton" class="primary-button" type="button">Start</button>
+          <p class="hint">Space / Click：飛起來　R：重開　Esc：暫停</p>
+        </div>
+      </section>
+    </main>
+
+    <script src="./game.js"></script>
+  </body>
+</html>

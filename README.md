@@ -1,6 +1,22 @@
-# Bird Dodge MVP (Unity 2D)
+# Bird Dodge Game
 
-This repository now contains a Unity-ready MVP implementation for a 2D bird dodge game:
+This repository contains a 2D bird dodge game with both Unity and HTML5 web versions.
+
+## Web Version
+
+The browser-playable version lives in `docs/` and is ready for GitHub Pages.
+
+- `Start`: begin the run
+- `Space` or click: flap and cycle the current bird's pose
+- `Restart`: restart after Game Over
+- `R`: quick restart
+- `Esc`: pause in the browser version
+- Each pipe pair passed gives 10 points
+- Three birds represent three lives; the bird only changes after a collision
+
+## Unity Version
+
+The Unity project still contains the original MVP implementation:
 
 - `Ready -> Running -> GameOver` state flow
 - 3-life bird swap using three PNG sprites
@@ -9,7 +25,16 @@ This repository now contains a Unity-ready MVP implementation for a 2D bird dodg
 - Local best score with `PlayerPrefs`
 - `R` quick restart
 
-## Quick Start
+## Quick Start: Web
+
+```powershell
+cd docs
+python -m http.server 8080
+```
+
+Open `http://localhost:8080`.
+
+## Quick Start: Unity
 
 1. Open this folder as a Unity project (Unity 2022 LTS or newer recommended).
 2. In Unity menu, run `Tools -> Bird Game -> Generate MVP Scenes`.
